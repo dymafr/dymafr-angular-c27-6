@@ -1,6 +1,6 @@
 import { createReducer, on } from '@ngrx/store';
 import { Todo } from '../interfaces/todo.interface';
-import * as TodosActions from './todos.action';
+import * as TodosActions from './todos.actions';
 
 export interface TodosState {
   data: Todo[];
@@ -14,6 +14,8 @@ export const TODOS_INITIAL_STATE = {
     },
   ],
 };
+
+export const todoFeatureKey = 'todos';
 
 export const todosReducer = createReducer(
   TODOS_INITIAL_STATE,
